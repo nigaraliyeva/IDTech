@@ -20,8 +20,8 @@ A web application that recognizes handwritten characters (digits and letters) us
 ## Project Structure
 emnist-recognizer/
 ├── app.py # Flask backend
-├── train.ipynb # Model training notebook
-├── deploy.ipynb # Deployment notebook
+├── mnist_train.ipynb # Model training notebook
+├── mnist_deploy.ipynb # Deployment notebook
 ├── emnist_model.h5 # Trained model
 ├── label_mapping.csv # Label to character mapping
 ├── requirements.txt # Dependencies

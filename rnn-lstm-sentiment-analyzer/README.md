@@ -32,7 +32,7 @@ Users type a movie review and the app instantly shows how both models perceive t
 
 | SimpleRNN | Embedding(10000, 128) → SimpleRNN(64) → Dense(1) | ~72% |
 
-| LSTM | Embedding(10000, 128) → LSTM(64) → Dense(1) | ~86% |
+| LSTM | Embedding(10000, 128) → LSTM(64) → Dense(1) | ~85% |
 
 
 

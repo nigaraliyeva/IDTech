@@ -1,4 +1,4 @@
-\# 🎬 RNN vs LSTM Sentiment Analyzer
+# 🎬 RNN vs LSTM Sentiment Analyzer
 
 
 
@@ -10,7 +10,7 @@ A web application that compares SimpleRNN and LSTM deep learning models on IMDB 
 
 
 
-\## 📌 Project Overview
+## 📌 Project Overview
 
 
 
@@ -22,7 +22,7 @@ Users type a movie review and the app instantly shows how both models perceive t
 
 
 
-\## 🧠 Models
+## 🧠 Models
 
 
 
@@ -36,7 +36,7 @@ Users type a movie review and the app instantly shows how both models perceive t
 
 
 
-Both models are trained on the \[IMDB Movie Reviews Dataset](https://ai.stanford.edu/~amaas/data/sentiment/) using Keras.
+Both models are trained on the [IMDB Movie Reviews Dataset](https://ai.stanford.edu/~amaas/data/sentiment/) using Keras.
 
 
 
@@ -44,7 +44,7 @@ Both models are trained on the \[IMDB Movie Reviews Dataset](https://ai.stanford
 
 
 
-\## 📁 Project Structure
+ 📁 Project Structure
 
 
 
@@ -78,51 +78,31 @@ rnn-lstm-sentiment-analyzer/
 
 
 
-\## 🚀 How to Run
+## 🚀 How to Run
 
 
 
-\### Step 1 — Train the Models
+### Step 1 — Train the Models
 
-1\. Open `notebooks/train\_models.ipynb` in Google Colab
+1. Open `notebooks/train\_models.ipynb` in Google Colab
 
-2\. Run all cells sequentially
+2. Run all cells sequentially
 
-3\. Models will be saved as `simple\_rnn\_model.h5` and `lstm\_model.h5`
-
-
-
-\### Step 2 — Deploy the App
-
-1\. Open `notebooks/deploy\_app.ipynb` in Google Colab
-
-2\. Upload the saved `.h5` model files
-
-3\. Run all cells sequentially
-
-4\. Copy the ngrok URL printed in the output
-
-5\. Open the URL in your browser
+3. Models will be saved as `simple\_rnn\_model.h5` and `lstm\_model.h5`
 
 
 
----
+### Step 2 — Deploy the App
 
+1. Open `notebooks/deploy\_app.ipynb` in Google Colab
 
+2. Upload the saved `.h5` model files
 
-\## 🖥️ App Features
+3. Run all cells sequentially
 
+4. Copy the ngrok URL printed in the output
 
-
-\- Text area for entering a movie review
-
-\- "Analyze Sentiment" button
-
-\- Side-by-side result cards for SimpleRNN and LSTM
-
-\- Score displayed as percentage
-
-\- Positive / Negative label with color coding
+5. Open the URL in your browser
 
 
 
@@ -130,7 +110,27 @@ rnn-lstm-sentiment-analyzer/
 
 
 
-\## 🔍 Key Finding
+## 🖥️ App Features
+
+
+
+- Text area for entering a movie review
+
+- "Analyze Sentiment" button
+
+- Side-by-side result cards for SimpleRNN and LSTM
+
+- Score displayed as percentage
+
+- Positive / Negative label with color coding
+
+
+
+---
+
+
+
+## 🔍 Key Finding
 
 
 
@@ -138,7 +138,7 @@ LSTM significantly outperforms SimpleRNN on context-heavy sentences.
 
 
 
-\*\*Example:\*\* \*"Great acting from the lead but the script was terrible and the plot had too many holes."\*
+**Example:** *"Great acting from the lead but the script was terrible and the plot had too many holes."*
 
 
 
@@ -152,7 +152,7 @@ LSTM significantly outperforms SimpleRNN on context-heavy sentences.
 
 
 
-SimpleRNN is confused by the positive word \*"great"\* at the beginning, while LSTM correctly understands the overall negative sentiment of the sentence.
+SimpleRNN is confused by the positive word *"great"* at the beginning, while LSTM correctly understands the overall negative sentiment of the sentence.
 
 
 
@@ -160,19 +160,19 @@ SimpleRNN is confused by the positive word \*"great"\* at the beginning, while L
 
 
 
-\## 🛠️ Tech Stack
+## 🛠️ Tech Stack
 
 
 
-\- Python
+- Python
 
-\- TensorFlow / Keras
+- TensorFlow / Keras
 
-\- Flask + Flask-CORS
+- Flask + Flask-CORS
 
-\- pyngrok
+- pyngrok
 
-\- HTML / CSS / JavaScript
+- HTML / CSS / JavaScript
 
 
 
@@ -180,7 +180,7 @@ SimpleRNN is confused by the positive word \*"great"\* at the beginning, while L
 
 
 
-\## ⚠️ Note
+## ⚠️ Note
 
 
 

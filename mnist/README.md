@@ -45,3 +45,5 @@ emnist-recognizer/
 - **Backend:** Python, Flask
 - **Frontend:** HTML, CSS, JavaScript
 - **Dataset:** EMNIST ByClass
+
+  https://drive.google.com/file/d/1Gs8UaZdz1fyLM30Hdji6gzgUBk-DCaeK/view?usp=sharing

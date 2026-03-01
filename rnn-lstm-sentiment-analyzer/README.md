@@ -1,4 +1,4 @@
-\# 🎬 RNN vs LSTM Sentiment Analyzer
+🎬 RNN vs LSTM Sentiment Analyzer
 
 
 
@@ -10,7 +10,7 @@ A web application that compares SimpleRNN and LSTM deep learning models on IMDB 
 
 
 
-\## 📌 Project Overview
+📌 Project Overview
 
 
 
@@ -22,7 +22,7 @@ Users type a movie review and the app instantly shows how both models perceive t
 
 
 
-\## 🧠 Models
+🧠 Models
 
 
 
@@ -44,7 +44,7 @@ Both models are trained on the \[IMDB Movie Reviews Dataset](https://ai.stanford
 
 
 
-\## 📁 Project Structure
+ 📁 Project Structure
 
 
 
@@ -187,6 +187,7 @@ SimpleRNN is confused by the positive word \*"great"\* at the beginning, while L
 Model files (`.h5`) are not included in this repository due to file size limitations.
 
 Run `train\_models.ipynb` to generate them.
+
 
 
 

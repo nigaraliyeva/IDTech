@@ -28,12 +28,20 @@ emnist-recognizer/
 └── README.md
 
 ## How to Run
-```bash
-pip install -r requirements.txt
-python app.py
-Tech Stack
-Python, TensorFlow/Keras, Flask
 
-HTML, CSS, JavaScript
+1. Clone the repository
+   ```bash
+   git clone https://github.com/SƏNIN_USERNAME/emnist-recognizer.git
+   cd emnist-recognizer
+2. Install dependencies
+   pip install -r requirements.txt
+3. Run the application
+   python app.py
+4. Open your browser and go to http://localhost:5000
 
-EMNIST ByClass Dataset
+ ## Tech Stack
+
+- **Model:** TensorFlow / Keras (CNN)
+- **Backend:** Python, Flask
+- **Frontend:** HTML, CSS, JavaScript
+- **Dataset:** EMNIST ByClass

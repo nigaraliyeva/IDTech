@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html>
+<head><meta charset="UTF-8"><title>Sentiment</title>
+<style>
+body{font-family:Arial;background:#0f0f1a;color:#eee;text-align:center;padding:40px}
+textarea{width:60%;height:120px;padding:12px;background:#1a1a2e;color:#eee;border:1px solid #444;border-radius:8px;font-size:1rem}
+button{margin:16px auto;display:block;padding:12px 40px;background:#7b5ea7;color:#fff;border:none;border-radius:8px;font-size:1rem;cursor:pointer}
+.results{display:flex;justify-content:center;gap:40px;margin-top:30px}
+.card{background:#1a1a2e;border-radius:12px;padding:30px;width:220px;border:2px solid #333}
+.positive{border-color:#4caf50}.negative{border-color:#f44336}
+.score{font-size:2rem;font-weight:bold;margin:12px 0}
+.positive .score{color:#4caf50}.negative .score{color:#f44336}
+</style></head>
+<body>
+<h1>🎬 RNN vs LSTM Sentiment Analyzer</h1>
+<textarea id="txt" placeholder="Write a movie review..."></textarea>
+<button id="btn">🔍 Analyze Sentiment</button>
+<div class="results">
+<div class="card" id="rnnCard"><h2>SimpleRNN</h2><div class="score" id="rnnScore">--</div><div id="rnnLabel">Waiting</div></div>
+<div class="card" id="lstmCard"><h2>LSTM</h2><div class="score" id="lstmScore">--</div><div id="lstmLabel">Waiting</div></div>
+</div>
+<script>
+var API = "https://seth-glariest-abbie.ngrok-free.dev";
+document.getElementById("btn").addEventListener("click", function() {
+    var text = document.getElementById("txt").value.trim();
+    if (!text) { alert("Please enter a review!"); return; }
+    fetch(API + "/predict", {
+        method: "POST",
+        headers: {
+            "Content-Type": "application/json",
+            "ngrok-skip-browser-warning": "true"
+        },
+        body: JSON.stringify({text: text})
+    })
+    .then(function(r) { return r.json(); })
+    .then(function(data) {
+        showResult("rnn", data.rnn_result);
+        showResult("lstm", data.lstm_result);
+    })
+    .catch(function(e) { alert("Error: " + e.message); });
+});
+function showResult(model, result) {
+    var isPos = result.label === "Positive";
+    document.getElementById(model+"Card").className = "card "+(isPos?"positive":"negative");
+    document.getElementById(model+"Score").textContent = (result.score*100).toFixed(1)+"%";
+    document.getElementById(model+"Label").textContent = isPos ? "😊 Positive" : "😞 Negative";
+}
+</script>
+</body>
+</html>
